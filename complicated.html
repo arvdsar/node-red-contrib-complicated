@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('complicated',{
+        category: 'function',
+        color: '#DEBD5C',
+        defaults: {
+            name: {value:""},
+            api: {value:""},
+            complication: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "white-globe.png",
+        label: function() {
+            return this.name||"complicated";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="complicated">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-api"><i class="fa-key"></i> ApiKey</label>
+        <input type="text" id="node-input-api">
+    </div>
+    <div class="form-row">
+        <label for="node-input-complication"><i class="fa-list"></i> Select Complication</label>
+        <select type="text" id="node-input-complication" style="width:70%;">
+            <option value="modularLarge">modularLarge</option>
+            <option value="modularSmall">modularSmall</option>
+            <option value="utilitarianSmall">utilitarianSmall</option>
+            <option value="utilitarianLarge">utilitarianLarge</option>
+            <option value="circularSmall">circularSmall</option>
+            <option value="extraLarge">extraLarge</option>
+            <option value="graphicCorner">graphicCorner</option>
+            <option value="graphicRectangular">graphicRectangular</option>
+            <option value="graphicBezel">graphicBezel</option>
+
+        </select>
+    </div>
+</script>
+
+
+<script type="text/x-red" data-help-name="complicated">
+    <p>Node-Red node to easily send messages to your Apple Watch using the app: Complicated.<BR>
+    Webpage of the app: https://mikelyons.org/complicated/ <br>
+    Find your API key in the Complicated app and enter this in the node. <br>
+    Select the complication you want to update from the node dropdown box.<br>
+    Connect the output to the http-request node. No need to configure the http-request node itself.
+    </p>
+</script>

@@ -1,0 +1,21 @@
+{
+  "name": "node-red-contrib-complicated",
+  "version": "0.0.1",
+  "description": "Node Red Node for sending messages to Apple Watch Complicated app (https://mikelyons.org/complicated/)",
+  "homepage": "https://github.com/arvdsar/node-red-contrib-complicated",
+  "bugs": "https://github.com/arvdsar/node-red-contrib-complicated/issues",
+  "main": "complicated.js",
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "nodes": {
+      "complicated": "complicated.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander van der Sar <alexander@vdsar.net> (https://vdsar.net)",
+  "license": "ISC"
+}
