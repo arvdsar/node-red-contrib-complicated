@@ -42,6 +42,29 @@
     </div>
 </script>
 
+<script type="text/javascript">
+    RED.nodes.registerType('complicated-key',{
+        category: 'config',
+        defaults: {
+            name: {value:""},
+            apikey: {value:"",required:true},
+        },
+        label: function() {
+            return this.apikey
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="complicated-key">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="icon-bookmark"></i> Name</label>
+        <input type="text" id="node-config-input-name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-apikey"><i class="icon-bookmark"></i> Apikey</label>
+        <input type="text" id="node-config-input-apikey">
+    </div>
+</script>
 
 <script type="text/x-red" data-help-name="complicated">
     <p>Node-Red node to easily send messages to your Apple Watch using the app: Complicated.<BR>
