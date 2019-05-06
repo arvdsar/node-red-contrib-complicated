@@ -48,6 +48,16 @@
     Webpage of the app: https://mikelyons.org/complicated/ <br>
     Find your API key in the Complicated app and enter this in the node. <br>
     Select the complication you want to update from the node dropdown box.<br>
-    Connect the output to the http-request node. No need to configure the http-request node itself.
+    Connect the output to the http-request node. No need to configure the http-request node itself.<br>
+    <br>
+    Feeding a multi-line input using an inject node does not work properly. When providing
+    the \n for a newline this is incorrectly processed.<br>
+    Feeding multi-line input using a function node will work:
+    msg.payload = "first line\nSecond Line"<br>
+    return msg<br>
+    <br>
+    Use an inject node with empty string to trigger a function node if you want to feed a
+    multi-line to Complicated app.<br>
+
     </p>
 </script>
